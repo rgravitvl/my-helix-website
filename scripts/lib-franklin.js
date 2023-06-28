@@ -527,9 +527,9 @@ export async function waitForLCP(lcpBlocks) {
 /**
  * loads a block named 'header' into header
  */
-export function loadHeader(header) {
-  const headerBlock = buildBlock('header', '');
-  header.append(headerBlock);
+export function loadHeader(lsigheader) {
+  const headerBlock = buildBlock('lsigheader', '');
+  lsigheader.append(headerBlock);
   decorateBlock(headerBlock);
   return loadBlock(headerBlock);
 }
